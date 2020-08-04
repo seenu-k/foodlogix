@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Suggestions</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="primary">
+    <ion-item>
+      <ion-icon name="pulse" slot="start"></ion-icon>
+      <ion-label>{{Foods[food1].name.toUpperCase()}}</ion-label>
+      <ion-button fill="outline" slot="end" (click)="presentToast()">I'll buy</ion-button>
+    </ion-item>
+    <ion-card-content>
+      <h2>Item Number : {{Foods[food1].id}}</h2>
+      <h2>Item Cost : &#8377;{{Foods[food1].cost}}</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="primary">
+    <ion-item>
+      <ion-icon name="pulse" slot="start"></ion-icon>
+      <ion-label>{{Foods[food2].name.toUpperCase()}}</ion-label>
+      <ion-button fill="outline" slot="end" (click)="presentToast()">I'll buy</ion-button>
+    </ion-item>
+    <ion-card-content>
+      <h2>Item Number : {{Foods[food2].id}}</h2>
+      <h2>Item Cost : &#8377;{{Foods[food2].cost}}</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="primary">
+    <ion-item>
+      <ion-icon name="pulse" slot="start"></ion-icon>
+      <ion-label>{{Foods[food3].name.toUpperCase()}}</ion-label>
+      <ion-button fill="outline" slot="end" (click)="presentToast()">I'll buy</ion-button>
+    </ion-item>
+    <ion-card-content>
+      <h2>Item Number : {{Foods[food3].id}}</h2>
+      <h2>Item Cost : &#8377;{{Foods[food3].cost}}</h2>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

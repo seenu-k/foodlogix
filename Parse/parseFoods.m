@@ -1,0 +1,11 @@
+ZJ = jsondecode(fileread('data.json'));
+Z = zeros(30, 4);
+Z(:, 1) = extractfield(ZJ, 'cost');
+Z(:, 2) = extractfield(ZJ, 'satiation');
+Z(:, 3) = extractfield(ZJ, 'health');
+Z(:, 4) = extractfield(ZJ, 'sweetness');
+Z = rescale(Z, 'InputMin', min(Z), 'InputMax', max(Z));
+[V, D] = eig(cov(Z, 1));
+[~, ind] = sort(diag(D), 'descend');
+D = D(ind, ind);
+V = V(:, ind);

@@ -1,0 +1,7 @@
+{
+  "name": "foodlogix",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
